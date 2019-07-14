@@ -276,55 +276,32 @@
 
 	var initKakaoMap = function() {
 		var HOME_PATH = window.HOME_PATH || '.';
-		var position = new naver.maps.LatLng(37.5261600757218, 127.042301232111);
-		var mapOptions = {
-			center: position,
-			zoom: 12,
-			minZoom: 7,
-			maxZoom: 14
+
+		var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+    		mapOption = { 
+			center: new kakao.maps.LatLng(37.5261600757218, 127.042301232111), // 지도의 중심좌표
+			level: 3 // 지도의 확대 레벨
 		};
 
-		var map = new naver.maps.Map('map', mapOptions);
+		// 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
+		var map = new kakao.maps.Map(mapContainer, mapOption); 
 
-		var marker = new naver.maps.Marker({
-			map: map,
-			position: position,
-			icon: {
-				url: HOME_PATH + '/images/heart_marker_coral.png',
-				scaledSize: new naver.maps.Size(50, 69)
-			},
-			animation: naver.maps.Animation.BOUNCE
+		var imageSrc = HOME_PATH + '/images/heart_marker_coral.png', // 마커이미지의 주소입니다    
+			imageSize = new kakao.maps.Size(50, 69), // 마커이미지의 크기입니다
+			imageOption = {offset: new kakao.maps.Point(27, 69)}; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
+			
+		// 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
+		var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption),
+			markerPosition = new kakao.maps.LatLng(37.5261600757218, 127.042301232111); // 마커가 표시될 위치입니다
+
+		// 마커를 생성합니다
+		var marker = new kakao.maps.Marker({
+			position: markerPosition, 
+			image: markerImage // 마커이미지 설정 
 		});
 
-		naver.maps.Event.addListener(marker, 'click', function () {
-			if (marker.getAnimation() !== null) {
-				marker.setAnimation(null);
-			} else {
-				marker.setAnimation(naver.maps.Animation.BOUNCE);
-			}
-
-			gaEvent('map', 'click', 'pin_animation');
-		});
-
-		$("#to-center").on("click", function (e) {
-			e.preventDefault();
-			map.setCenter(position);
-			map.setZoom(12, true);
-			buttons.fadeOut();
-			gaEvent('map', 'click', 'center_button_hide');
-		});
-		var buttons = $("#map").find(".buttons");
-		buttons.hide();
-		var eventList = ['mouseup', 'touchup', 'dragend', 'pinchend', 'click', 'dblclick', 'tap', 'longtap', 'twofingertap', 'doubletap', 'zoom_changed'];
-		eventList.forEach(function (eventName) {
-			naver.maps.Event.addListener(map, eventName, function (e) {
-				if (buttons.is(':visible')) {
-					return;
-				}
-				buttons.fadeIn();
-				gaEvent('map', eventName, 'center_button_show');
-			});
-		});
+		// 마커가 지도 위에 표시되도록 설정합니다
+		marker.setMap(map);
 	};
 
 	var initCountDown = function() {

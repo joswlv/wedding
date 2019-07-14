@@ -32,16 +32,20 @@
 
     <!-- Facebook and Twitter integration -->
     <meta property="og:title" content="승완♡수연 청첩장"/>
-    <meta property="og:image" content="http://swsy_wedding.github.io/images/og_img.jpg"/>
-    <meta property="og:url" content="http://swsy_wedding.github.io"/>
+    <meta property="og:image" content="https://joswlv.github.io/wedding/images/og_img.jpg"/>
+    <meta property="og:url" content="https://joswlv.github.io/wedding/"/>
     <meta property="og:site_name" content="승완♡수연 청첩장"/>
     <meta property="og:description" content="9월 29일(일) 12:00, 더클래스 청담"/>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143780324-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-    <!-- Google Analytics -->
-    
-    <!-- End Google Analytics -->
+    gtag('config', 'UA-143780324-1');
+    </script>
 
     <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,400italic,700' rel='stylesheet'
           type='text/css'>
@@ -184,32 +188,32 @@
             <div class="row row-bottom-padded-md">
                 <div class="col-md-12">
                     <ul id="fh5co-gallery-list">
-                        <li id="wedding-gallery" class="one-third animate-box" data-animate-effect="fadeIn"
-                            style="background-image: url(images/wedding/wedding_gif.gif); ">
+                        <li id="gallery1" class="one-third animate-box" data-animate-effect="fadeIn"
+                            style="background-image: url(#); ">
                             <a href="#">
                                 <div class="case-studies-summary">
                                     <h2>웨딩 갤러리1</h2>
                                 </div>
                             </a>
                         </li>
-                        <li id="laos-gallery" class="one-third animate-box" data-animate-effect="fadeIn"
-                            style="background-image: url(images/laos/laos_cover.gif); ">
+                        <li id="gallery2" class="one-third animate-box" data-animate-effect="fadeIn"
+                            style="background-image: url(#); ">
                             <a href="#" class="color-2">
                                 <div class="case-studies-summary">
                                     <h2>갤러리2</h2>
                                 </div>
                             </a>
                         </li>
-                        <li id="fin-gallery" class="one-third animate-box" data-animate-effect="fadeIn"
-                            style="background-image: url(images/fin/fin_cover.gif); ">
+                        <li id="gallery3" class="one-third animate-box" data-animate-effect="fadeIn"
+                            style="background-image: url(#); ">
                             <a href="#" class="color-3">
                                 <div class="case-studies-summary">
                                     <h2>갤러리3</h2>
                                 </div>
                             </a>
                         </li>
-                        <li id="vv-gallery" class="one-third animate-box" data-animate-effect="fadeIn"
-                            style="background-image: url(images/vv/vv_cover.gif); ">
+                        <li id="gallery4" class="one-third animate-box" data-animate-effect="fadeIn"
+                            style="background-image: url(#f); ">
                             <a href="#" class="color-4">
                                 <div class="case-studies-summary">
                                     <h2>갤러리4</h2>
@@ -217,16 +221,16 @@
                             </a>
                         </li>
 
-                        <li id="tw-gallery" class="one-third animate-box" data-animate-effect="fadeIn"
-                            style="background-image: url(images/tw/tw_cover.gif); ">
+                        <li id="gallery5" class="one-third animate-box" data-animate-effect="fadeIn"
+                            style="background-image: url(#); ">
                             <a href="#" class="color-3">                        
                                 <div class="case-studies-summary">
                                     <h2>갤러리5</h2>
                                 </div>
                             </a>
                         </li>
-                        <li id="hk-gallery" class="one-third animate-box" data-animate-effect="fadeIn"
-                            style="background-image: url(images/hk/hk_cover.gif); ">
+                        <li id="gallery6" class="one-third animate-box" data-animate-effect="fadeIn"
+                            style="background-image: url(#); ">
                             <a href="#" class="color-4">
                                 <div class="case-studies-summary">
                                     <h2>갤러리6</h2>
@@ -266,14 +270,7 @@
                 <div class="col-md-8 col-md-offset-2 text-center fh5co-heading fh5co-heading-sm">
                     <h2>MAP</h2>
                 </div>
-
-                <div id="map" class="fh5co-map">
-                    <div class="buttons">
-                        <a id="to-center" href="#" class="control-btn">
-                            <img src="images/heart_marker_btn_coral.png" alt="goto center">
-                        </a>
-                    </div>
-                </div>
+                <div id="map" class="fh5co-map"></div>
             </div>
         </div>
     </div>
@@ -313,7 +310,7 @@
                         <span>참석여부를 알려주시면 감사하겠습니다.</span><br>
                         <span>동행인이 있으신 경우, 미리 알려주시면</span><br>
                         <span>식사와 자리를 준비하도록 하겠습니다.</span><br>
-                        <span><button><a href="https://forms.gle/1CEwovjvrVzGnk5G6">참석여부확인</a></button></span>
+                        <span><button class="btn btn-outline-danger"><a href="https://forms.gle/1CEwovjvrVzGnk5G6">참석여부확인</a></button></span>
                     </p>
                 </div>
             </div>
