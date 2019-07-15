@@ -178,61 +178,61 @@
 	//PhotoSwipe
 	var initGallery = function() {
 		var gallery0 = {
-			"#wedding-gallery": [
+			"#gallery_1": [
 				{
-					src: 'images/wedding/wedding_0.jpg',
-					w: 1280,
-					h: 853
+					src: 'images/gallery_1.jpg',
+					w: 3265,
+					h: 4898
 				}
 			]
 		};
 
 		var gallery1 = {
-			"#laos-gallery": [
+			"#gallery_2": [
 				{
-					src: 'images/laos/laos_2.jpg',
-					w: 1108,
-					h: 1478
+					src: 'images/gallery_2.jpg',
+					w: 3237,
+					h: 5007
 				}
 			]
 		};
 
 		var gallery2 = {
-			"#fin-gallery": [
+			"#gallery_3": [
 				{
-					src: 'images/fin/fin-1.jpg',
-					w: 1478,
-					h: 1108
+					src: 'images/gallery_3.jpg',
+					w: 3249,
+					h: 4923
 				}
 			]
 		};
 
 		var gallery3 = {
-			"#vv-gallery": [
+			"#gallery_4": [
 				{
-					src: 'images/vv/vv_1.jpg',
-					w: 1536,
-					h: 1536
+					src: 'images/gallery_4.jpg',
+					w: 3265,
+					h: 4898
 				}
 			]
 		};
 
 		var gallery4 = {
-			"#tw-gallery": [
+			"#gallery_5": [
 				{
-					src: 'images/tw/tw_1.jpg',
-					w: 1528,
-					h: 994
+					src: 'images/gallery_5.jpg',
+					w: 3265,
+					h: 4898
 				}
 			]
 		};
 
 		var gallery5 = {
-			"#hk-gallery": [
+			"#gallery_6": [
 				{
-					src: 'images/hk/hk_1.jpg',
-					w: 960,
-					h: 1117
+					src: 'images/gallery_6.jpg',
+					w: 3142,
+					h: 5092
 				}
 			]
 		};
