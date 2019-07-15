@@ -280,7 +280,7 @@
 		var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
     		mapOption = { 
 			center: new kakao.maps.LatLng(37.5261600757218, 127.042301232111), // 지도의 중심좌표
-			level: 3 // 지도의 확대 레벨
+			level: 4 // 지도의 확대 레벨
 		};
 
 		var map = new kakao.maps.Map(mapContainer, mapOption); 
@@ -308,19 +308,30 @@
 			position: hallMarkerPosition, 
 			image: hallMarkerImage 
 		});
-
-		var iwContent = '<div style="padding:5px;">셔틀버스 운행</div>',
-			iwPosition = new kakao.maps.LatLng(37.5249298061868, 127.045793906426); 
-
-		var infowindow = new kakao.maps.InfoWindow({
-			position : iwPosition, 
-			content : iwContent 
-		});
 		
 		parkingMarker.setMap(map);
-		infowindow.open(map, parkingMarker);
-		
 		hallMarker.setMap(map);
+
+		// var markers = [
+		// 	{
+		// 		position: hallMarkerPosition,
+		// 		image: hallMarkerImage
+		// 	},
+		// 	{
+		// 		position: parkingMarkerPosition, 
+		// 		image: parkingMarkerImg,
+		// 		text: '셔틀버스운행'
+		// 	}
+		// ];
+		
+		// var staticMapContainer  = document.getElementById('map'),
+		// 	staticMapOption = { 
+		// 		center: hallMarkerPosition,
+		// 		level: 4,
+		// 		marker: markers
+		// 	};    
+		
+		// var staticMap = new kakao.maps.StaticMap(staticMapContainer, staticMapOption);
 	};
 
 	var initCountDown = function() {
